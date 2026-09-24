@@ -303,6 +303,58 @@ section { position:relative; }
 .detail-row { display:flex; gap:8px; margin-bottom:8px; font-size:13px; }
 .detail-row .lbl { color:var(--text-muted); min-width:70px; font-weight:500; }
 .detail-row .val { color:var(--dark); font-weight:600; flex:1; }
+/* ===== DELIVERY DATE BANNER ===== */
+.delivery-date-banner {
+  background: linear-gradient(135deg, #006B3F, #00B860);
+  border-radius: 12px;
+  padding: 18px 24px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0,107,63,0.25);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.delivery-date-banner .dd-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.delivery-date-banner .dd-text { flex: 1; }
+.delivery-date-banner .dd-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  font-weight: 600;
+}
+.delivery-date-banner .dd-date {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 2px;
+}
+.delivery-date-banner .dd-badge {
+  background: rgba(255,255,255,0.25);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+@media(max-width:768px) {
+  .delivery-date-banner { padding: 14px 18px; gap: 12px; }
+  .delivery-date-banner .dd-icon { width: 40px; height: 40px; font-size: 18px; }
+  .delivery-date-banner .dd-date { font-size: 16px; }
+}
 /* Google Maps */
 .map-section { margin-bottom:24px; }
 .map-section h4 { font-size:14px; font-weight:700; color:var(--dark); margin-bottom:12px; display:flex; align-items:center; gap:8px; }
@@ -948,6 +1000,15 @@ section { position:relative; }
           <span>Out for Delivery</span>
           <span>Delivered</span>
         </div>
+      </div>
+            <!-- ===== DELIVERY DATE BANNER ===== -->
+      <div class="delivery-date-banner">
+        <div class="dd-icon"><i class="fas fa-calendar-check"></i></div>
+        <div class="dd-text">
+          <div class="dd-label">Estimated Delivery Date</div>
+          <div class="dd-date">September 26, 2026</div>
+        </div>
+        <div class="dd-badge">Scheduled</div>
       </div>
       <!-- Sender / Receiver Details -->
       <div class="details-grid">
